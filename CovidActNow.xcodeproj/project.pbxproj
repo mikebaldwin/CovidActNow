@@ -13,6 +13,18 @@
 		9E59F91326FB56DB0050A3E3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E59F91226FB56DB0050A3E3 /* Preview Assets.xcassets */; };
 		9E59F91E26FB56DB0050A3E3 /* CovidActNowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E59F91D26FB56DB0050A3E3 /* CovidActNowTests.swift */; };
 		9E59F92926FB56DC0050A3E3 /* CovidActNowUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E59F92826FB56DC0050A3E3 /* CovidActNowUITests.swift */; };
+		9E59F94526FB5A7B0050A3E3 /* CovidActNowApiIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E59F94426FB5A7B0050A3E3 /* CovidActNowApiIntegrationTests.swift */; };
+		9E85A54F26FE04B900642448 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E85A54E26FE04B900642448 /* Endpoint.swift */; };
+		9E85A55126FE0A5800642448 /* EndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E85A55026FE0A5800642448 /* EndpointTests.swift */; };
+		9E85A55326FF644000642448 /* StatesEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E85A55226FF644000642448 /* StatesEndpoint.swift */; };
+		9ECAE3EE26FB625F00337392 /* CovidActNowService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECAE3ED26FB625F00337392 /* CovidActNowService.swift */; };
+		9ECAE3F026FB678A00337392 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECAE3EF26FB678A00337392 /* APIError.swift */; };
+		9ECAE3F226FB67B600337392 /* CountyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECAE3F126FB67B600337392 /* CountyData.swift */; };
+		9ECAE3F426FCB14900337392 /* Fips.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECAE3F326FCB14900337392 /* Fips.swift */; };
+		9ECAE3F626FCB1CE00337392 /* FipsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECAE3F526FCB1CE00337392 /* FipsTests.swift */; };
+		9ECAE3FA26FCB66400337392 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECAE3F926FCB66400337392 /* HTTPMethod.swift */; };
+		9ECAE3FC26FCB8A000337392 /* States.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECAE3FB26FCB8A000337392 /* States.swift */; };
+		9ECAE3FE26FCBE6C00337392 /* StateData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECAE3FD26FCBE6C00337392 /* StateData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,6 +36,13 @@
 			remoteInfo = CovidActNow;
 		};
 		9E59F92526FB56DC0050A3E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9E59F90026FB56D80050A3E3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9E59F90726FB56D80050A3E3;
+			remoteInfo = CovidActNow;
+		};
+		9E59F93F26FB59FD0050A3E3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9E59F90026FB56D80050A3E3 /* Project object */;
 			proxyType = 1;
@@ -45,6 +64,20 @@
 		9E59F92426FB56DC0050A3E3 /* CovidActNowUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CovidActNowUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E59F92826FB56DC0050A3E3 /* CovidActNowUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidActNowUITests.swift; sourceTree = "<group>"; };
 		9E59F92A26FB56DC0050A3E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9E59F93A26FB59FD0050A3E3 /* CovidActNowIntegrationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CovidActNowIntegrationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E59F93E26FB59FD0050A3E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9E59F94426FB5A7B0050A3E3 /* CovidActNowApiIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidActNowApiIntegrationTests.swift; sourceTree = "<group>"; };
+		9E85A54E26FE04B900642448 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		9E85A55026FE0A5800642448 /* EndpointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointTests.swift; sourceTree = "<group>"; };
+		9E85A55226FF644000642448 /* StatesEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatesEndpoint.swift; sourceTree = "<group>"; };
+		9ECAE3ED26FB625F00337392 /* CovidActNowService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidActNowService.swift; sourceTree = "<group>"; };
+		9ECAE3EF26FB678A00337392 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		9ECAE3F126FB67B600337392 /* CountyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountyData.swift; sourceTree = "<group>"; };
+		9ECAE3F326FCB14900337392 /* Fips.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fips.swift; sourceTree = "<group>"; };
+		9ECAE3F526FCB1CE00337392 /* FipsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FipsTests.swift; sourceTree = "<group>"; };
+		9ECAE3F926FCB66400337392 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		9ECAE3FB26FCB8A000337392 /* States.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = States.swift; sourceTree = "<group>"; };
+		9ECAE3FD26FCBE6C00337392 /* StateData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +102,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9E59F93726FB59FD0050A3E3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -78,6 +118,7 @@
 				9E59F90A26FB56D80050A3E3 /* CovidActNow */,
 				9E59F91C26FB56DB0050A3E3 /* CovidActNowTests */,
 				9E59F92726FB56DC0050A3E3 /* CovidActNowUITests */,
+				9E59F93B26FB59FD0050A3E3 /* CovidActNowIntegrationTests */,
 				9E59F90926FB56D80050A3E3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -88,6 +129,7 @@
 				9E59F90826FB56D80050A3E3 /* CovidActNow.app */,
 				9E59F91926FB56DB0050A3E3 /* CovidActNowTests.xctest */,
 				9E59F92426FB56DC0050A3E3 /* CovidActNowUITests.xctest */,
+				9E59F93A26FB59FD0050A3E3 /* CovidActNowIntegrationTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,10 +137,13 @@
 		9E59F90A26FB56D80050A3E3 /* CovidActNow */ = {
 			isa = PBXGroup;
 			children = (
-				9E59F90B26FB56D80050A3E3 /* CovidActNowApp.swift */,
-				9E59F90D26FB56D80050A3E3 /* ContentView.swift */,
-				9E59F90F26FB56DB0050A3E3 /* Assets.xcassets */,
 				9E59F91426FB56DB0050A3E3 /* Info.plist */,
+				9E59F90D26FB56D80050A3E3 /* ContentView.swift */,
+				9E59F90B26FB56D80050A3E3 /* CovidActNowApp.swift */,
+				9ECAE3F326FCB14900337392 /* Fips.swift */,
+				9ECAE3FB26FCB8A000337392 /* States.swift */,
+				9E59F90F26FB56DB0050A3E3 /* Assets.xcassets */,
+				9EE2557726FB5D2D00DC1DBB /* Networking */,
 				9E59F91126FB56DB0050A3E3 /* Preview Content */,
 			);
 			path = CovidActNow;
@@ -115,8 +160,10 @@
 		9E59F91C26FB56DB0050A3E3 /* CovidActNowTests */ = {
 			isa = PBXGroup;
 			children = (
-				9E59F91D26FB56DB0050A3E3 /* CovidActNowTests.swift */,
 				9E59F91F26FB56DB0050A3E3 /* Info.plist */,
+				9E59F91D26FB56DB0050A3E3 /* CovidActNowTests.swift */,
+				9E85A55026FE0A5800642448 /* EndpointTests.swift */,
+				9ECAE3F526FCB1CE00337392 /* FipsTests.swift */,
 			);
 			path = CovidActNowTests;
 			sourceTree = "<group>";
@@ -128,6 +175,29 @@
 				9E59F92A26FB56DC0050A3E3 /* Info.plist */,
 			);
 			path = CovidActNowUITests;
+			sourceTree = "<group>";
+		};
+		9E59F93B26FB59FD0050A3E3 /* CovidActNowIntegrationTests */ = {
+			isa = PBXGroup;
+			children = (
+				9E59F94426FB5A7B0050A3E3 /* CovidActNowApiIntegrationTests.swift */,
+				9E59F93E26FB59FD0050A3E3 /* Info.plist */,
+			);
+			path = CovidActNowIntegrationTests;
+			sourceTree = "<group>";
+		};
+		9EE2557726FB5D2D00DC1DBB /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				9ECAE3EF26FB678A00337392 /* APIError.swift */,
+				9ECAE3F126FB67B600337392 /* CountyData.swift */,
+				9ECAE3ED26FB625F00337392 /* CovidActNowService.swift */,
+				9E85A54E26FE04B900642448 /* Endpoint.swift */,
+				9ECAE3F926FCB66400337392 /* HTTPMethod.swift */,
+				9ECAE3FD26FCBE6C00337392 /* StateData.swift */,
+				9E85A55226FF644000642448 /* StatesEndpoint.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,6 +256,24 @@
 			productReference = 9E59F92426FB56DC0050A3E3 /* CovidActNowUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		9E59F93926FB59FD0050A3E3 /* CovidActNowIntegrationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9E59F94126FB59FD0050A3E3 /* Build configuration list for PBXNativeTarget "CovidActNowIntegrationTests" */;
+			buildPhases = (
+				9E59F93626FB59FD0050A3E3 /* Sources */,
+				9E59F93726FB59FD0050A3E3 /* Frameworks */,
+				9E59F93826FB59FD0050A3E3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9E59F94026FB59FD0050A3E3 /* PBXTargetDependency */,
+			);
+			name = CovidActNowIntegrationTests;
+			productName = CovidActNowIntegrationTests;
+			productReference = 9E59F93A26FB59FD0050A3E3 /* CovidActNowIntegrationTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -203,6 +291,10 @@
 						TestTargetID = 9E59F90726FB56D80050A3E3;
 					};
 					9E59F92326FB56DC0050A3E3 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 9E59F90726FB56D80050A3E3;
+					};
+					9E59F93926FB59FD0050A3E3 = {
 						CreatedOnToolsVersion = 12.5.1;
 						TestTargetID = 9E59F90726FB56D80050A3E3;
 					};
@@ -224,6 +316,7 @@
 				9E59F90726FB56D80050A3E3 /* CovidActNow */,
 				9E59F91826FB56DB0050A3E3 /* CovidActNowTests */,
 				9E59F92326FB56DC0050A3E3 /* CovidActNowUITests */,
+				9E59F93926FB59FD0050A3E3 /* CovidActNowIntegrationTests */,
 			);
 		};
 /* End PBXProject section */
@@ -252,6 +345,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9E59F93826FB59FD0050A3E3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -260,7 +360,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E59F90E26FB56D80050A3E3 /* ContentView.swift in Sources */,
+				9ECAE3F426FCB14900337392 /* Fips.swift in Sources */,
+				9ECAE3FA26FCB66400337392 /* HTTPMethod.swift in Sources */,
+				9ECAE3FC26FCB8A000337392 /* States.swift in Sources */,
+				9E85A54F26FE04B900642448 /* Endpoint.swift in Sources */,
+				9ECAE3F026FB678A00337392 /* APIError.swift in Sources */,
+				9ECAE3FE26FCBE6C00337392 /* StateData.swift in Sources */,
+				9E85A55326FF644000642448 /* StatesEndpoint.swift in Sources */,
+				9ECAE3F226FB67B600337392 /* CountyData.swift in Sources */,
 				9E59F90C26FB56D80050A3E3 /* CovidActNowApp.swift in Sources */,
+				9ECAE3EE26FB625F00337392 /* CovidActNowService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +378,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E59F91E26FB56DB0050A3E3 /* CovidActNowTests.swift in Sources */,
+				9E85A55126FE0A5800642448 /* EndpointTests.swift in Sources */,
+				9ECAE3F626FCB1CE00337392 /* FipsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +388,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E59F92926FB56DC0050A3E3 /* CovidActNowUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9E59F93626FB59FD0050A3E3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9E59F94526FB5A7B0050A3E3 /* CovidActNowApiIntegrationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,6 +411,11 @@
 			isa = PBXTargetDependency;
 			target = 9E59F90726FB56D80050A3E3 /* CovidActNow */;
 			targetProxy = 9E59F92526FB56DC0050A3E3 /* PBXContainerItemProxy */;
+		};
+		9E59F94026FB59FD0050A3E3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9E59F90726FB56D80050A3E3 /* CovidActNow */;
+			targetProxy = 9E59F93F26FB59FD0050A3E3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -422,7 +546,7 @@
 				DEVELOPMENT_TEAM = 84MPEV8978;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = CovidActNow/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -444,7 +568,7 @@
 				DEVELOPMENT_TEAM = 84MPEV8978;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = CovidActNow/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -464,7 +588,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 84MPEV8978;
 				INFOPLIST_FILE = CovidActNowTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -486,7 +610,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 84MPEV8978;
 				INFOPLIST_FILE = CovidActNowTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -507,6 +631,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 84MPEV8978;
 				INFOPLIST_FILE = CovidActNowUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -527,6 +652,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 84MPEV8978;
 				INFOPLIST_FILE = CovidActNowUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -537,6 +663,48 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = CovidActNow;
+			};
+			name = Release;
+		};
+		9E59F94226FB59FD0050A3E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 84MPEV8978;
+				INFOPLIST_FILE = CovidActNowIntegrationTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mikebaldwin.CovidActNowIntegrationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CovidActNow.app/CovidActNow";
+			};
+			name = Debug;
+		};
+		9E59F94326FB59FD0050A3E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 84MPEV8978;
+				INFOPLIST_FILE = CovidActNowIntegrationTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mikebaldwin.CovidActNowIntegrationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CovidActNow.app/CovidActNow";
 			};
 			name = Release;
 		};
@@ -575,6 +743,15 @@
 			buildConfigurations = (
 				9E59F93426FB56DC0050A3E3 /* Debug */,
 				9E59F93526FB56DC0050A3E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9E59F94126FB59FD0050A3E3 /* Build configuration list for PBXNativeTarget "CovidActNowIntegrationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9E59F94226FB59FD0050A3E3 /* Debug */,
+				9E59F94326FB59FD0050A3E3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
