@@ -25,6 +25,7 @@ class CovidActNowServiceTests: XCTestCase {
         }
         
         let stateData = try XCTUnwrap(expectedResult)
+        let metrics = stateData.metrics
 
         // Then
         XCTAssertEqual(stateData.fips.stringValue, "41")
@@ -34,7 +35,13 @@ class CovidActNowServiceTests: XCTestCase {
         XCTAssertNil(stateData.county)
         XCTAssertEqual(stateData.level, "state")
         XCTAssertEqual(stateData.population, 4217737)
-        XCTAssertNotNil(stateData.metrics)
+        
+        XCTAssertEqual(metrics.testPositivityRatio, 0.084)
+        XCTAssertEqual(metrics.caseDensity, 37.8)
+        XCTAssertEqual(metrics.infectionRate, 0.96)
+        XCTAssertEqual(metrics.icuCapacityRatio, 0.77)
+        XCTAssertEqual(metrics.vaccinationsInitiatedRatio, 0.662)
+        XCTAssertEqual(metrics.vaccinationsCompletedRatio, 0.603)
     }
     
     func testGetDataForCounty() async throws {
@@ -53,6 +60,7 @@ class CovidActNowServiceTests: XCTestCase {
         }
 
         let countyData = try XCTUnwrap(expectedResult)
+        let metrics = countyData.metrics
         
         // Then
         XCTAssertEqual(countyData.fips.stringValue, "41051")
@@ -63,5 +71,12 @@ class CovidActNowServiceTests: XCTestCase {
         XCTAssertEqual(countyData.level, "county")
         XCTAssertEqual(countyData.population, 812855)
         XCTAssertNotNil(countyData.metrics)
+        
+        XCTAssertEqual(metrics.testPositivityRatio, 0.059)
+        XCTAssertEqual(metrics.caseDensity, 19.2)
+        XCTAssertEqual(metrics.infectionRate, 0.92)
+        XCTAssertEqual(metrics.icuCapacityRatio, 0.81)
+        XCTAssertEqual(metrics.vaccinationsInitiatedRatio, 0.759)
+        XCTAssertEqual(metrics.vaccinationsCompletedRatio, 0.69)
     }
 }
