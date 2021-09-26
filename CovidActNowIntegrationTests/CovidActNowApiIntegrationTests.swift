@@ -9,15 +9,6 @@ import XCTest
 @testable import CovidActNow
 
 class CovidActNowApiIntegrationTests: XCTestCase {
-
-    override func setUpWithError() throws {
-        
-    }
-
-    override func tearDownWithError() throws {
-        
-    }
-
     func testGetStateDataForOregon() async throws {
         // Given
         let covidActNowService = CovidActNowService()
@@ -41,5 +32,4 @@ class CovidActNowApiIntegrationTests: XCTestCase {
         XCTAssertEqual(stateData.fips.intValue, 41)
         XCTAssertTrue(stateData.population > 1_000_000)
     }
-    
 }
