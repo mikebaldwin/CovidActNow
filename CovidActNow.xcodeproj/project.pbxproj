@@ -15,7 +15,7 @@
 		9E59F90E26FB56D80050A3E3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E59F90D26FB56D80050A3E3 /* ContentView.swift */; };
 		9E59F91026FB56DB0050A3E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E59F90F26FB56DB0050A3E3 /* Assets.xcassets */; };
 		9E59F91326FB56DB0050A3E3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E59F91226FB56DB0050A3E3 /* Preview Assets.xcassets */; };
-		9E59F91E26FB56DB0050A3E3 /* CovidActNowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E59F91D26FB56DB0050A3E3 /* CovidActNowTests.swift */; };
+		9E59F91E26FB56DB0050A3E3 /* CovidActNowServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E59F91D26FB56DB0050A3E3 /* CovidActNowServiceTests.swift */; };
 		9E59F92926FB56DC0050A3E3 /* CovidActNowUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E59F92826FB56DC0050A3E3 /* CovidActNowUITests.swift */; };
 		9E59F94526FB5A7B0050A3E3 /* CovidActNowApiIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E59F94426FB5A7B0050A3E3 /* CovidActNowApiIntegrationTests.swift */; };
 		9E85A54F26FE04B900642448 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E85A54E26FE04B900642448 /* Endpoint.swift */; };
@@ -69,7 +69,7 @@
 		9E59F91226FB56DB0050A3E3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9E59F91426FB56DB0050A3E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E59F91926FB56DB0050A3E3 /* CovidActNowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CovidActNowTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9E59F91D26FB56DB0050A3E3 /* CovidActNowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidActNowTests.swift; sourceTree = "<group>"; };
+		9E59F91D26FB56DB0050A3E3 /* CovidActNowServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidActNowServiceTests.swift; sourceTree = "<group>"; };
 		9E59F91F26FB56DB0050A3E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E59F92426FB56DC0050A3E3 /* CovidActNowUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CovidActNowUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E59F92826FB56DC0050A3E3 /* CovidActNowUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidActNowUITests.swift; sourceTree = "<group>"; };
@@ -174,7 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				9E59F91F26FB56DB0050A3E3 /* Info.plist */,
-				9E59F91D26FB56DB0050A3E3 /* CovidActNowTests.swift */,
+				9E59F91D26FB56DB0050A3E3 /* CovidActNowServiceTests.swift */,
 				9E85A55026FE0A5800642448 /* EndpointTests.swift */,
 				9ECAE3F526FCB1CE00337392 /* FipsTests.swift */,
 				9EC73049270108A5008CB2A8 /* MockCountyDataSessionProvider.swift */,
@@ -207,9 +207,9 @@
 			isa = PBXGroup;
 			children = (
 				9ECAE3EF26FB678A00337392 /* APIError.swift */,
-				9ECAE3ED26FB625F00337392 /* CovidActNowService.swift */,
-				9E85A54E26FE04B900642448 /* Endpoint.swift */,
 				9ECAE3F926FCB66400337392 /* HTTPMethod.swift */,
+				9E85A54E26FE04B900642448 /* Endpoint.swift */,
+				9ECAE3ED26FB625F00337392 /* CovidActNowService.swift */,
 				9ECAE3FD26FCBE6C00337392 /* LocationData.swift */,
 				9EC7304727010693008CB2A8 /* CountyEndpoint.swift */,
 				9E85A55226FF644000642448 /* StateEndpoint.swift */,
@@ -399,7 +399,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E59F91E26FB56DB0050A3E3 /* CovidActNowTests.swift in Sources */,
+				9E59F91E26FB56DB0050A3E3 /* CovidActNowServiceTests.swift in Sources */,
 				9E4D7D592700A5B40069C851 /* MockStateDataSessionProvider.swift in Sources */,
 				9E85A55126FE0A5800642448 /* EndpointTests.swift in Sources */,
 				9ECAE3F626FCB1CE00337392 /* FipsTests.swift in Sources */,

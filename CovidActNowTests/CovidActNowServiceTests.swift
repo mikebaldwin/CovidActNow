@@ -1,5 +1,5 @@
 //
-//  CovidActNowTests.swift
+//  CovidActNowServiceTests.swift
 //  CovidActNowTests
 //
 //  Created by Michael Baldwin on 9/22/21.
@@ -8,7 +8,7 @@
 import XCTest
 @testable import CovidActNow
 
-class CovidActNowTests: XCTestCase {
+class CovidActNowServiceTests: XCTestCase {
     func testGetDataForState() async throws {
         // Given
         let service = CovidActNowService(with: MockStateDataSessionProvider())
