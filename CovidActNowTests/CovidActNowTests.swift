@@ -9,15 +9,6 @@ import XCTest
 @testable import CovidActNow
 
 class CovidActNowTests: XCTestCase {
-
-    override func setUpWithError() throws {
-        
-    }
-
-    override func tearDownWithError() throws {
-        
-    }
-
     func testGetDataForState() async throws {
         // Given
         let service = CovidActNowService(with: MockStateDataSessionProvider())
