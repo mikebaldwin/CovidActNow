@@ -1,5 +1,5 @@
 //
-//  MockSessionProvider.swift
+//  MockStateDataSessionProvider.swift
 //  CovidActNowTests
 //
 //  Created by Michael Baldwin on 9/26/21.
@@ -7,10 +7,12 @@
 
 import Foundation
 @testable import CovidActNow
-import SwiftUI
 
 class MockStateDataSessionProvider: SessionProviding {
-    func sendRequest<T>(_ request: URLRequest, for decodable: T.Type) async -> Result<T, APIError> where T : Decodable {
+    func sendRequest<T>(
+        _ request: URLRequest,
+        for decodable: T.Type
+    ) async -> Result<T, APIError> where T : Decodable {
         guard let bundlePath = Bundle(for: type(of: self)).path(forResource: "StateData", ofType: "json")
         else {
             return .failure(.noResult)
@@ -19,7 +21,7 @@ class MockStateDataSessionProvider: SessionProviding {
         else {
             return .failure(.dataDownloadFailed)
         }
-        guard let stateData = try? JSONDecoder().decode(StateData.self, from: json)
+        guard let stateData = try? JSONDecoder().decode(LocationData.self, from: json)
         else {
             return .failure(.jsonDecodingFailed)
         }

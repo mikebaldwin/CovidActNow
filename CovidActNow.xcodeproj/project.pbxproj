@@ -28,7 +28,7 @@
 		9ECAE3F626FCB1CE00337392 /* FipsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECAE3F526FCB1CE00337392 /* FipsTests.swift */; };
 		9ECAE3FA26FCB66400337392 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECAE3F926FCB66400337392 /* HTTPMethod.swift */; };
 		9ECAE3FC26FCB8A000337392 /* States.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECAE3FB26FCB8A000337392 /* States.swift */; };
-		9ECAE3FE26FCBE6C00337392 /* StateData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECAE3FD26FCBE6C00337392 /* StateData.swift */; };
+		9ECAE3FE26FCBE6C00337392 /* LocationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECAE3FD26FCBE6C00337392 /* LocationData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,7 +85,7 @@
 		9ECAE3F526FCB1CE00337392 /* FipsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FipsTests.swift; sourceTree = "<group>"; };
 		9ECAE3F926FCB66400337392 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		9ECAE3FB26FCB8A000337392 /* States.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = States.swift; sourceTree = "<group>"; };
-		9ECAE3FD26FCBE6C00337392 /* StateData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateData.swift; sourceTree = "<group>"; };
+		9ECAE3FD26FCBE6C00337392 /* LocationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,7 +204,7 @@
 				9ECAE3ED26FB625F00337392 /* CovidActNowService.swift */,
 				9E85A54E26FE04B900642448 /* Endpoint.swift */,
 				9ECAE3F926FCB66400337392 /* HTTPMethod.swift */,
-				9ECAE3FD26FCBE6C00337392 /* StateData.swift */,
+				9ECAE3FD26FCBE6C00337392 /* LocationData.swift */,
 				9EC7304727010693008CB2A8 /* CountyEndpoint.swift */,
 				9E85A55226FF644000642448 /* StatesEndpoint.swift */,
 				9E4D7D562700A5110069C851 /* SessionProvider.swift */,
@@ -378,7 +378,7 @@
 				9ECAE3FC26FCB8A000337392 /* States.swift in Sources */,
 				9E85A54F26FE04B900642448 /* Endpoint.swift in Sources */,
 				9ECAE3F026FB678A00337392 /* APIError.swift in Sources */,
-				9ECAE3FE26FCBE6C00337392 /* StateData.swift in Sources */,
+				9ECAE3FE26FCBE6C00337392 /* LocationData.swift in Sources */,
 				9E4D7D572700A5110069C851 /* SessionProvider.swift in Sources */,
 				9EC7304627010125008CB2A8 /* County.swift in Sources */,
 				9EC7304827010693008CB2A8 /* CountyEndpoint.swift in Sources */,

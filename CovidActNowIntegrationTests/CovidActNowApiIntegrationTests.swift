@@ -21,7 +21,7 @@ class CovidActNowApiIntegrationTests: XCTestCase {
     func testGetStateDataForOregon() async throws {
         // Given
         let covidActNowService = CovidActNowService()
-        var expectedResult: StateData?
+        var expectedResult: LocationData?
         
         // When
         let result = await covidActNowService.getDataFor(state: .Oregon)
@@ -36,7 +36,7 @@ class CovidActNowApiIntegrationTests: XCTestCase {
         let stateData = try XCTUnwrap(expectedResult)
         
         // Then
-        XCTAssertEqual(stateData.abbreviation, "OR")
+        XCTAssertEqual(stateData.state, "OR")
         XCTAssertEqual(stateData.fips.stringValue, "41")
         XCTAssertEqual(stateData.fips.intValue, 41)
         XCTAssertTrue(stateData.population > 1_000_000)

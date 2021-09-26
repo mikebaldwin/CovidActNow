@@ -18,10 +18,10 @@ class CovidActNowTests: XCTestCase {
         
     }
 
-    func testGetDataForStateSuccess() async throws {
+    func testGetDataForState() async throws {
         // Given
-        let service = CovidActNowService(with: MockSessionProvider())
-        var expectedResult: StateData?
+        let service = CovidActNowService(with: MockStateDataSessionProvider())
+        var expectedResult: LocationData?
         
         // When
         let result = await service.getDataFor(state: .Oregon)
@@ -36,12 +36,14 @@ class CovidActNowTests: XCTestCase {
         let stateData = try XCTUnwrap(expectedResult)
 
         // Then
-        // Then
-        XCTAssertEqual(stateData.abbreviation, "OR")
         XCTAssertEqual(stateData.fips.stringValue, "41")
         XCTAssertEqual(stateData.fips.intValue, 41)
-        XCTAssertTrue(stateData.population > 1_000_000)
-
+        XCTAssertEqual(stateData.country, "US")
+        XCTAssertEqual(stateData.state, "OR")
+        XCTAssertNil(stateData.county)
+        XCTAssertEqual(stateData.level, "state")
+        XCTAssertEqual(stateData.population, 4217737)
+        XCTAssertNotNil(stateData.metrics)
     }
 
 }
