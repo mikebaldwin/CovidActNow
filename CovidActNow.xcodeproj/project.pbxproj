@@ -27,7 +27,7 @@
 		9ECAE3F426FCB14900337392 /* Fips.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECAE3F326FCB14900337392 /* Fips.swift */; };
 		9ECAE3F626FCB1CE00337392 /* FipsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECAE3F526FCB1CE00337392 /* FipsTests.swift */; };
 		9ECAE3FA26FCB66400337392 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECAE3F926FCB66400337392 /* HTTPMethod.swift */; };
-		9ECAE3FC26FCB8A000337392 /* States.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECAE3FB26FCB8A000337392 /* States.swift */; };
+		9ECAE3FC26FCB8A000337392 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECAE3FB26FCB8A000337392 /* State.swift */; };
 		9ECAE3FE26FCBE6C00337392 /* LocationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECAE3FD26FCBE6C00337392 /* LocationData.swift */; };
 /* End PBXBuildFile section */
 
@@ -84,7 +84,7 @@
 		9ECAE3F326FCB14900337392 /* Fips.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fips.swift; sourceTree = "<group>"; };
 		9ECAE3F526FCB1CE00337392 /* FipsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FipsTests.swift; sourceTree = "<group>"; };
 		9ECAE3F926FCB66400337392 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
-		9ECAE3FB26FCB8A000337392 /* States.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = States.swift; sourceTree = "<group>"; };
+		9ECAE3FB26FCB8A000337392 /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
 		9ECAE3FD26FCBE6C00337392 /* LocationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -375,7 +375,7 @@
 				9E59F90E26FB56D80050A3E3 /* ContentView.swift in Sources */,
 				9ECAE3F426FCB14900337392 /* Fips.swift in Sources */,
 				9ECAE3FA26FCB66400337392 /* HTTPMethod.swift in Sources */,
-				9ECAE3FC26FCB8A000337392 /* States.swift in Sources */,
+				9ECAE3FC26FCB8A000337392 /* State.swift in Sources */,
 				9E85A54F26FE04B900642448 /* Endpoint.swift in Sources */,
 				9ECAE3F026FB678A00337392 /* APIError.swift in Sources */,
 				9ECAE3FE26FCBE6C00337392 /* LocationData.swift in Sources */,
