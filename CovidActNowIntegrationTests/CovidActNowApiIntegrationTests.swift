@@ -37,7 +37,8 @@ class CovidActNowApiIntegrationTests: XCTestCase {
         
         // Then
         XCTAssertEqual(stateData.abbreviation, "OR")
-        XCTAssertEqual(stateData.fips, "41")
+        XCTAssertEqual(stateData.fips.stringValue, "41")
+        XCTAssertEqual(stateData.fips.intValue, 41)
         XCTAssertTrue(stateData.population > 1_000_000)
     }
     
