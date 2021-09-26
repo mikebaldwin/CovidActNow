@@ -15,7 +15,7 @@ struct CovidActNowService {
     }
     
     func getDataFor(state: State) async -> Result<LocationData, APIError> {
-        let endpoint = StatesEndpoint(for: state)
+        let endpoint = StateEndpoint(for: state)
         let result = await sessionProvider.sendRequest(endpoint.request, for: LocationData.self)
         return result
     }
