@@ -9,7 +9,7 @@ import Foundation
 @testable import CovidActNow
 import SwiftUI
 
-class MockSessionProvider: SessionProviding {
+class MockStateDataSessionProvider: SessionProviding {
     func sendRequest<T>(_ request: URLRequest, for decodable: T.Type) async -> Result<T, APIError> where T : Decodable {
         guard let bundlePath = Bundle(for: type(of: self)).path(forResource: "StateData", ofType: "json")
         else {
