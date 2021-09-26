@@ -1,0 +1,245 @@
+{
+  "fips": "41",
+  "country": "US",
+  "state": "OR",
+  "county": null,
+  "level": "state",
+  "lat": null,
+  "locationId": "iso1:us#iso2:us-or",
+  "long": null,
+  "population": 4217737,
+  "metrics": {
+    "testPositivityRatio": 0.084,
+    "testPositivityRatioDetails": {
+      "source": "other"
+    },
+    "caseDensity": 37.8,
+    "contactTracerCapacityRatio": 0.08,
+    "infectionRate": 0.96,
+    "infectionRateCI90": 0.1,
+    "icuCapacityRatio": 0.77,
+    "vaccinationsInitiatedRatio": 0.662,
+    "vaccinationsCompletedRatio": 0.603
+  },
+  "riskLevels": {
+    "overall": 3,
+    "testPositivityRatio": 1,
+    "caseDensity": 3,
+    "contactTracerCapacityRatio": 2,
+    "infectionRate": 1,
+    "icuCapacityRatio": 1
+  },
+  "cdcTransmissionLevel": 3,
+  "actuals": {
+    "cases": 320990,
+    "deaths": 3682,
+    "positiveTests": 286961,
+    "negativeTests": 4506784,
+    "contactTracers": 656,
+    "hospitalBeds": {
+      "capacity": 7104,
+      "currentUsageTotal": 5527,
+      "currentUsageCovid": 1041
+    },
+    "icuBeds": {
+      "capacity": 813,
+      "currentUsageTotal": 630,
+      "currentUsageCovid": 237
+    },
+    "newCases": 2075,
+    "newDeaths": 21,
+    "vaccinesDistributed": 6675905,
+    "vaccinationsInitiated": 2791779,
+    "vaccinationsCompleted": 2541271,
+    "vaccinesAdministered": 5181250,
+    "vaccinesAdministeredDemographics": null,
+    "vaccinationsInitiatedDemographics": null
+  },
+  "annotations": {
+    "cases": {
+      "sources": [
+        {
+          "type": "NYTimes",
+          "url": "https://github.com/nytimes/covid-19-data",
+          "name": "The New York Times"
+        }
+      ],
+      "anomalies": []
+    },
+    "deaths": {
+      "sources": [
+        {
+          "type": "NYTimes",
+          "url": "https://github.com/nytimes/covid-19-data",
+          "name": "The New York Times"
+        }
+      ],
+      "anomalies": []
+    },
+    "positiveTests": {
+      "sources": [
+        {
+          "type": "HHSTesting",
+          "url": null,
+          "name": null
+        }
+      ],
+      "anomalies": []
+    },
+    "negativeTests": {
+      "sources": [
+        {
+          "type": "HHSTesting",
+          "url": null,
+          "name": null
+        }
+      ],
+      "anomalies": []
+    },
+    "contactTracers": {
+      "sources": [
+        {
+          "type": "TestAndTrace",
+          "url": null,
+          "name": null
+        }
+      ],
+      "anomalies": []
+    },
+    "hospitalBeds": {
+      "sources": [
+        {
+          "type": "other",
+          "url": "https://healthdata.gov/Hospital/COVID-19-Reported-Patient-Impact-and-Hospital-Capa/g62h-syeh",
+          "name": "Department of Health and Human Services"
+        }
+      ],
+      "anomalies": []
+    },
+    "icuBeds": {
+      "sources": [
+        {
+          "type": "other",
+          "url": "https://healthdata.gov/Hospital/COVID-19-Reported-Patient-Impact-and-Hospital-Capa/g62h-syeh",
+          "name": "Department of Health and Human Services"
+        }
+      ],
+      "anomalies": []
+    },
+    "newCases": null,
+    "newDeaths": {
+      "sources": [],
+      "anomalies": [
+        {
+          "date": "2021-02-24",
+          "type": "zscore_outlier",
+          "original_observation": 33.0
+        }
+      ]
+    },
+    "vaccinesDistributed": {
+      "sources": [
+        {
+          "type": "other",
+          "url": "https://covid.cdc.gov/covid-data-tracker/#vaccinations",
+          "name": "Centers for Disease Control and Prevention"
+        }
+      ],
+      "anomalies": []
+    },
+    "vaccinationsInitiated": {
+      "sources": [
+        {
+          "type": "other",
+          "url": "https://covid.cdc.gov/covid-data-tracker/#vaccinations",
+          "name": "Centers for Disease Control and Prevention"
+        }
+      ],
+      "anomalies": []
+    },
+    "vaccinationsCompleted": {
+      "sources": [
+        {
+          "type": "other",
+          "url": "https://covid.cdc.gov/covid-data-tracker/#vaccinations",
+          "name": "Centers for Disease Control and Prevention"
+        }
+      ],
+      "anomalies": []
+    },
+    "vaccinesAdministered": {
+      "sources": [
+        {
+          "type": "other",
+          "url": "https://covid.cdc.gov/covid-data-tracker/#vaccinations",
+          "name": "Centers for Disease Control and Prevention"
+        }
+      ],
+      "anomalies": []
+    },
+    "testPositivityRatio": {
+      "sources": [
+        {
+          "type": "HHSTesting",
+          "url": null,
+          "name": null
+        }
+      ],
+      "anomalies": []
+    },
+    "caseDensity": {
+      "sources": [
+        {
+          "type": "NYTimes",
+          "url": "https://github.com/nytimes/covid-19-data",
+          "name": "The New York Times"
+        }
+      ],
+      "anomalies": []
+    },
+    "contactTracerCapacityRatio": {
+      "sources": [
+        {
+          "type": "TestAndTrace",
+          "url": null,
+          "name": null
+        }
+      ],
+      "anomalies": []
+    },
+    "infectionRate": {
+      "sources": [
+        {
+          "type": "NYTimes",
+          "url": "https://github.com/nytimes/covid-19-data",
+          "name": "The New York Times"
+        }
+      ],
+      "anomalies": []
+    },
+    "infectionRateCI90": {
+      "sources": [
+        {
+          "type": "NYTimes",
+          "url": "https://github.com/nytimes/covid-19-data",
+          "name": "The New York Times"
+        }
+      ],
+      "anomalies": []
+    },
+    "icuCapacityRatio": {
+      "sources": [
+        {
+          "type": "other",
+          "url": "https://healthdata.gov/Hospital/COVID-19-Reported-Patient-Impact-and-Hospital-Capa/g62h-syeh",
+          "name": "Department of Health and Human Services"
+        }
+      ],
+      "anomalies": []
+    },
+    "vaccinationsInitiatedRatio": null,
+    "vaccinationsCompletedRatio": null
+  },
+  "lastUpdatedDate": "2021-09-25",
+  "url": "https://covidactnow.org/us/oregon-or"
+}

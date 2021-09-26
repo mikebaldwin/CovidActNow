@@ -11,23 +11,37 @@ import XCTest
 class CovidActNowTests: XCTestCase {
 
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        
     }
 
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    func testGetDataForStateSuccess() async throws {
+        // Given
+        let service = CovidActNowService(with: MockSessionProvider())
+        var expectedResult: StateData?
+        
+        // When
+        let result = await service.getDataFor(state: .Oregon)
+        
+        switch result {
+        case let .success(resultData):
+            expectedResult = resultData
+        case let .failure(error):
+            XCTFail("Mock session failed with error: \(error)")
         }
+        
+        let stateData = try XCTUnwrap(expectedResult)
+
+        // Then
+        // Then
+        XCTAssertEqual(stateData.abbreviation, "OR")
+        XCTAssertEqual(stateData.fips.stringValue, "41")
+        XCTAssertEqual(stateData.fips.intValue, 41)
+        XCTAssertTrue(stateData.population > 1_000_000)
+
     }
 
 }
