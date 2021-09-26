@@ -8,7 +8,7 @@
 import XCTest
 @testable import CovidActNow
 
-class CovidActNowApiIntegrationTests: XCTestCase {
+class CovidActNowServiceIntegrationTests: XCTestCase {
     func testGetStateDataForOregon() async throws {
         // Given
         let covidActNowService = CovidActNowService()
