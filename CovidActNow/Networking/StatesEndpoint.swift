@@ -2,7 +2,7 @@
 //  StatesEndpoint.swift
 //  CovidActNow
 //
-//  Created by Michael Baldwin on 9/25/21.
+//  Created by Michael Baldwin on 9/26/21.
 //
 
 import Foundation
