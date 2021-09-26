@@ -21,19 +21,19 @@ class CovidActNowApiIntegrationTests: XCTestCase {
     func testGetStateDataForOregon() async throws {
         // Given
         let covidActNowService = CovidActNowService()
-        var expectedData: StateData?
+        var expectedResult: StateData?
         
         // When
         let result = await covidActNowService.getDataFor(state: .Oregon)
         
         switch result {
         case let .success(resultData):
-            expectedData = resultData
-        case .failure:
-            break
+            expectedResult = resultData
+        case let .failure(error):
+            XCTFail("Mock session failed with error: \(error)")
         }
         
-        let stateData = try XCTUnwrap(expectedData)
+        let stateData = try XCTUnwrap(expectedResult)
         
         // Then
         XCTAssertEqual(stateData.abbreviation, "OR")
