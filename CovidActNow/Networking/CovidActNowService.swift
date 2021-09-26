@@ -20,7 +20,9 @@ struct CovidActNowService {
         return result
     }
     
-    func getDataFor(county fips: Fips) async -> Result<CountyData, APIError> {
-        return .failure(.noResult)
+    func getDataFor(county: County) async -> Result<LocationData, APIError> {
+        let endpoint = CountyEndpoint(for: county)
+        let result = await sessionProvider.sendRequest(endpoint.request, for: LocationData.self)
+        return result
     }
 }

@@ -1,0 +1,205 @@
+{
+  "fips": "41051",
+  "country": "US",
+  "state": "OR",
+  "county": "Multnomah County",
+  "level": "county",
+  "lat": null,
+  "locationId": "iso1:us#iso2:us-or#fips:41051",
+  "long": null,
+  "population": 812855,
+  "metrics": {
+    "testPositivityRatio": 0.059,
+    "testPositivityRatioDetails": {
+      "source": "other"
+    },
+    "caseDensity": 19.2,
+    "contactTracerCapacityRatio": null,
+    "infectionRate": 0.92,
+    "infectionRateCI90": 0.11,
+    "icuCapacityRatio": 0.81,
+    "vaccinationsInitiatedRatio": 0.759,
+    "vaccinationsCompletedRatio": 0.69
+  },
+  "riskLevels": {
+    "overall": 2,
+    "testPositivityRatio": 1,
+    "caseDensity": 2,
+    "contactTracerCapacityRatio": 4,
+    "infectionRate": 1,
+    "icuCapacityRatio": 2
+  },
+  "cdcTransmissionLevel": 3,
+  "actuals": {
+    "cases": 51325,
+    "deaths": 643,
+    "positiveTests": null,
+    "negativeTests": null,
+    "contactTracers": null,
+    "hospitalBeds": {
+      "capacity": 1890,
+      "currentUsageTotal": 1596,
+      "currentUsageCovid": 197
+    },
+    "icuBeds": {
+      "capacity": 236,
+      "currentUsageTotal": 192,
+      "currentUsageCovid": 68
+    },
+    "newCases": 80,
+    "newDeaths": 1,
+    "vaccinesDistributed": null,
+    "vaccinationsInitiated": 617313,
+    "vaccinationsCompleted": 560905,
+    "vaccinesAdministered": 1071225,
+    "vaccinesAdministeredDemographics": null,
+    "vaccinationsInitiatedDemographics": null
+  },
+  "annotations": {
+    "cases": {
+      "sources": [
+        {
+          "type": "NYTimes",
+          "url": "https://github.com/nytimes/covid-19-data",
+          "name": "The New York Times"
+        }
+      ],
+      "anomalies": []
+    },
+    "deaths": {
+      "sources": [
+        {
+          "type": "NYTimes",
+          "url": "https://github.com/nytimes/covid-19-data",
+          "name": "The New York Times"
+        }
+      ],
+      "anomalies": []
+    },
+    "positiveTests": null,
+    "negativeTests": null,
+    "contactTracers": null,
+    "hospitalBeds": {
+      "sources": [
+        {
+          "type": "other",
+          "url": "https://healthdata.gov/Hospital/COVID-19-Reported-Patient-Impact-and-Hospital-Capa/anag-cw7u",
+          "name": "Department of Health and Human Services"
+        }
+      ],
+      "anomalies": []
+    },
+    "icuBeds": {
+      "sources": [
+        {
+          "type": "other",
+          "url": "https://healthdata.gov/Hospital/COVID-19-Reported-Patient-Impact-and-Hospital-Capa/anag-cw7u",
+          "name": "Department of Health and Human Services"
+        }
+      ],
+      "anomalies": []
+    },
+    "newCases": {
+      "sources": [],
+      "anomalies": [
+        {
+          "date": "2020-05-27",
+          "type": "zscore_outlier",
+          "original_observation": 41.0
+        },
+        {
+          "date": "2020-06-21",
+          "type": "zscore_outlier",
+          "original_observation": 84.0
+        }
+      ]
+    },
+    "newDeaths": null,
+    "vaccinesDistributed": null,
+    "vaccinationsInitiated": {
+      "sources": [
+        {
+          "type": "other",
+          "url": "https://data.cdc.gov/Vaccinations/COVID-19-Vaccinations-in-the-United-States-County/8xkx-amqh",
+          "name": "Centers for Disease Control and Prevention"
+        }
+      ],
+      "anomalies": []
+    },
+    "vaccinationsCompleted": {
+      "sources": [
+        {
+          "type": "other",
+          "url": "https://data.cdc.gov/Vaccinations/COVID-19-Vaccinations-in-the-United-States-County/8xkx-amqh",
+          "name": "Centers for Disease Control and Prevention"
+        }
+      ],
+      "anomalies": []
+    },
+    "vaccinesAdministered": {
+      "sources": [
+        {
+          "type": "CANScrapersStateProviders",
+          "url": "https://covidvaccine.oregon.gov/",
+          "name": "Oregon Health Authority"
+        }
+      ],
+      "anomalies": []
+    },
+    "testPositivityRatio": {
+      "sources": [
+        {
+          "type": "CDCTesting",
+          "url": "https://covid.cdc.gov/covid-data-tracker/#county-view",
+          "name": "Centers for Disease Control and Prevention"
+        }
+      ],
+      "anomalies": []
+    },
+    "caseDensity": {
+      "sources": [
+        {
+          "type": "NYTimes",
+          "url": "https://github.com/nytimes/covid-19-data",
+          "name": "The New York Times"
+        }
+      ],
+      "anomalies": []
+    },
+    "contactTracerCapacityRatio": null,
+    "infectionRate": {
+      "sources": [
+        {
+          "type": "NYTimes",
+          "url": "https://github.com/nytimes/covid-19-data",
+          "name": "The New York Times"
+        }
+      ],
+      "anomalies": []
+    },
+    "infectionRateCI90": {
+      "sources": [
+        {
+          "type": "NYTimes",
+          "url": "https://github.com/nytimes/covid-19-data",
+          "name": "The New York Times"
+        }
+      ],
+      "anomalies": []
+    },
+    "icuCapacityRatio": {
+      "sources": [
+        {
+          "type": "other",
+          "url": "https://healthdata.gov/Hospital/COVID-19-Reported-Patient-Impact-and-Hospital-Capa/anag-cw7u",
+          "name": "Department of Health and Human Services"
+        }
+      ],
+      "anomalies": []
+    },
+    "vaccinationsInitiatedRatio": null,
+    "vaccinationsCompletedRatio": null
+  },
+  "lastUpdatedDate": "2021-09-22",
+  "url": "https://covidactnow.org/us/oregon-or/county/multnomah_county"
+}
