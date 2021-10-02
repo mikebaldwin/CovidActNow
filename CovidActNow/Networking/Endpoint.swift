@@ -26,4 +26,20 @@ extension Endpoint {
     var queryItems: [URLQueryItem] {
         [URLQueryItem(name: "apiKey", value: .apiKey)]
     }
+    var request: URLRequest {
+        var components = URLComponents()
+        components.scheme = scheme
+        components.host = host
+        components.path = path
+        components.queryItems = queryItems
+
+        guard let url = components.url else {
+            fatalError("Failed to construct a valid url from components.")
+        }
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = method.rawValue
+        
+        return request
+    }
 }
