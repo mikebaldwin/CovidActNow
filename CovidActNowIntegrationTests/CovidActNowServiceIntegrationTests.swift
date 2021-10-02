@@ -21,16 +21,21 @@ class CovidActNowServiceIntegrationTests: XCTestCase {
         case let .success(resultData):
             expectedResult = resultData
         case let .failure(error):
-            XCTFail("Mock session failed with error: \(error)")
+            XCTFail("Session failed with error: \(error)")
         }
         
         let stateData = try XCTUnwrap(expectedResult)
         
         // Then
-        XCTAssertEqual(stateData.state, "OR")
         XCTAssertEqual(stateData.fips.stringValue, "41")
         XCTAssertEqual(stateData.fips.intValue, 41)
-        XCTAssertTrue(stateData.population > 1_000_000)
+        XCTAssertEqual(stateData.country, "US")
+        XCTAssertEqual(stateData.state, "OR")
+        XCTAssertNil(stateData.county)
+        XCTAssertEqual(stateData.level, "state")
+        XCTAssertTrue(stateData.population > 0)
+        XCTAssertNotNil(stateData.metrics)
+    }
     
     func testGetCountyDataForMultnomah() async throws {
         // Given
@@ -60,3 +65,4 @@ class CovidActNowServiceIntegrationTests: XCTestCase {
         XCTAssertNotNil(countyData.metrics)
     }
 }
+
