@@ -23,10 +23,34 @@ struct SessionProvider: SessionProviding {
         }
         
         do {
+            try validate(response.urlResponse)
+        } catch {
+            return .failure(error as! APIError)
+        }
+        
+        do {
             let decodedData = try JSONDecoder().decode(decodable, from: response.data)
             return .success(decodedData)
         } catch {
             return .failure(.jsonDecodingFailed)
+        }
+    }
+}
+
+private extension SessionProvider {
+    func validate(_ urlResponse: URLResponse) throws {
+        guard let httpResponse = urlResponse as? HTTPURLResponse
+        else {
+            throw APIError.unknownError
+        }
+        
+        switch httpResponse.statusCode {
+        case 200:
+            return
+        case 403:
+            throw APIError.accessDenied
+        default:
+            throw APIError.unknownError
         }
     }
 }

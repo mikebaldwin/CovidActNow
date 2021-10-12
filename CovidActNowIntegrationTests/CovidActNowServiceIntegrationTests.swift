@@ -64,5 +64,26 @@ class CovidActNowServiceIntegrationTests: XCTestCase {
         XCTAssertTrue(countyData.population > 0)
         XCTAssertNotNil(countyData.metrics)
     }
+    
+    func testGetDataForInvalidFips() async throws {
+        // Given
+        let service = CovidActNowService()
+        var expectedError: APIError?
+        
+        // When
+        let result = await service.getDataFor(county: .invalidCounty)
+        
+        switch result {
+        case .success:
+            XCTFail("Call resulted in a success, and should not have.")
+        case let .failure(error):
+            expectedError = error
+        }
+        
+        let invalidRequestError = try XCTUnwrap(expectedError)
+
+        // Then
+        XCTAssertEqual(invalidRequestError, APIError.accessDenied)
+    }
 }
 

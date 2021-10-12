@@ -11,4 +11,6 @@ enum APIError: Error {
     case noResult
     case jsonDecodingFailed
     case dataDownloadFailed
+    case accessDenied
+    case unknownError
 }
