@@ -15,7 +15,7 @@ class CovidActNowServiceIntegrationTests: XCTestCase {
         var expectedResult: LocationData?
         
         // When
-        let result = await covidActNowService.getDataFor(state: .Oregon)
+        let result = await covidActNowService.getDataFor(state: .oregon)
         
         switch result {
         case let .success(resultData):

@@ -12,7 +12,7 @@ class EndpointTests: XCTestCase {
 
     func testStatesEndpoint() throws {
         // Given
-        let endpoint = StateEndpoint(for: .Oregon)
+        let endpoint = StateEndpoint(for: .oregon)
         
         // When
         let url = try XCTUnwrap(endpoint.request.url)

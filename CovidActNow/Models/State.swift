@@ -8,5 +8,5 @@
 import Foundation
 
 enum State: String {
-    case Oregon = "OR"
+    case oregon = "OR"
 }
