@@ -12,7 +12,7 @@ struct CountyEndpoint: Endpoint {
     var method: HTTPMethod
     
     init(for county: County) {
-        path = "/v2/county/\(county.fips.stringValue).json"
+        path = "/v2/county/\(county.rawValue).json"
         method = HTTPMethod.get
     }
 }

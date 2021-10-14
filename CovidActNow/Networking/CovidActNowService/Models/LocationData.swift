@@ -8,7 +8,7 @@
 import Foundation
 
 struct LocationData: Decodable {
-    let fips: Fips
+    let fips: String
     let country: String
     let state: String
     let county: String?
@@ -24,19 +24,5 @@ struct LocationData: Decodable {
         case level
         case population
         case metrics
-    }
-    
-    init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: CodingKeys.self)
-        
-        let fipsValue = try container.decode(String.self, forKey: CodingKeys.fips)
-        fips = Fips(with: fipsValue)
-
-        country = try container.decode(String.self, forKey: CodingKeys.country)
-        state = try container.decode(String.self, forKey: CodingKeys.state)
-        county = try container.decodeIfPresent(String.self, forKey: CodingKeys.county)
-        level = try container.decode(String.self, forKey: CodingKeys.level)
-        population = try container.decode(Int.self, forKey: CodingKeys.population)
-        metrics = try container.decode(CovidMetrics.self, forKey: CodingKeys.metrics)
-    }
+    }    
 }

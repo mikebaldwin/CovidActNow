@@ -27,8 +27,6 @@
 		9EC73050270118C0008CB2A8 /* CovidMetrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC7304F270118C0008CB2A8 /* CovidMetrics.swift */; };
 		9ECAE3EE26FB625F00337392 /* CovidActNowService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECAE3ED26FB625F00337392 /* CovidActNowService.swift */; };
 		9ECAE3F026FB678A00337392 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECAE3EF26FB678A00337392 /* APIError.swift */; };
-		9ECAE3F426FCB14900337392 /* Fips.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECAE3F326FCB14900337392 /* Fips.swift */; };
-		9ECAE3F626FCB1CE00337392 /* FipsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECAE3F526FCB1CE00337392 /* FipsTests.swift */; };
 		9ECAE3FA26FCB66400337392 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECAE3F926FCB66400337392 /* HTTPMethod.swift */; };
 		9ECAE3FC26FCB8A000337392 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECAE3FB26FCB8A000337392 /* State.swift */; };
 		9ECAE3FE26FCBE6C00337392 /* LocationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECAE3FD26FCBE6C00337392 /* LocationData.swift */; };
@@ -87,8 +85,6 @@
 		9EC7304F270118C0008CB2A8 /* CovidMetrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidMetrics.swift; sourceTree = "<group>"; };
 		9ECAE3ED26FB625F00337392 /* CovidActNowService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidActNowService.swift; sourceTree = "<group>"; };
 		9ECAE3EF26FB678A00337392 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
-		9ECAE3F326FCB14900337392 /* Fips.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fips.swift; sourceTree = "<group>"; };
-		9ECAE3F526FCB1CE00337392 /* FipsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FipsTests.swift; sourceTree = "<group>"; };
 		9ECAE3F926FCB66400337392 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		9ECAE3FB26FCB8A000337392 /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
 		9ECAE3FD26FCBE6C00337392 /* LocationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationData.swift; sourceTree = "<group>"; };
@@ -174,7 +170,6 @@
 			isa = PBXGroup;
 			children = (
 				9E59F91F26FB56DB0050A3E3 /* Info.plist */,
-				9ECAE3F526FCB1CE00337392 /* FipsTests.swift */,
 				9EC7304B270117C1008CB2A8 /* Networking */,
 			);
 			path = CovidActNowTests;
@@ -243,7 +238,6 @@
 			isa = PBXGroup;
 			children = (
 				9EC7304527010125008CB2A8 /* County.swift */,
-				9ECAE3F326FCB14900337392 /* Fips.swift */,
 				9ECAE3FB26FCB8A000337392 /* State.swift */,
 			);
 			path = Models;
@@ -424,7 +418,6 @@
 			files = (
 				9E59F90E26FB56D80050A3E3 /* ContentView.swift in Sources */,
 				9EC73050270118C0008CB2A8 /* CovidMetrics.swift in Sources */,
-				9ECAE3F426FCB14900337392 /* Fips.swift in Sources */,
 				9ECAE3FA26FCB66400337392 /* HTTPMethod.swift in Sources */,
 				9ECAE3FC26FCB8A000337392 /* State.swift in Sources */,
 				9E85A54F26FE04B900642448 /* Endpoint.swift in Sources */,
@@ -446,7 +439,6 @@
 				9E59F91E26FB56DB0050A3E3 /* CovidActNowServiceTests.swift in Sources */,
 				9E4D7D592700A5B40069C851 /* MockStateDataSessionProvider.swift in Sources */,
 				9E85A55126FE0A5800642448 /* EndpointTests.swift in Sources */,
-				9ECAE3F626FCB1CE00337392 /* FipsTests.swift in Sources */,
 				9EC7304A270108A5008CB2A8 /* MockCountyDataSessionProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -28,8 +28,7 @@ class CovidActNowServiceTests: XCTestCase {
         let metrics = stateData.metrics
 
         // Then
-        XCTAssertEqual(stateData.fips.stringValue, "41")
-        XCTAssertEqual(stateData.fips.intValue, 41)
+        XCTAssertEqual(stateData.fips, "41")
         XCTAssertEqual(stateData.country, "US")
         XCTAssertEqual(stateData.state, "OR")
         XCTAssertNil(stateData.county)
@@ -63,8 +62,7 @@ class CovidActNowServiceTests: XCTestCase {
         let metrics = countyData.metrics
         
         // Then
-        XCTAssertEqual(countyData.fips.stringValue, "41051")
-        XCTAssertEqual(countyData.fips.intValue, 41051)
+        XCTAssertEqual(countyData.fips, "41051")
         XCTAssertEqual(countyData.country, "US")
         XCTAssertEqual(countyData.state, "OR")
         XCTAssertEqual(countyData.county, "Multnomah County")
