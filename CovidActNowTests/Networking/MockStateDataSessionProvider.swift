@@ -9,23 +9,20 @@ import Foundation
 @testable import CovidActNow
 
 class MockStateDataSessionProvider: SessionProviding {
-    func sendRequest<T>(
-        _ request: URLRequest,
-        for decodable: T.Type
-    ) async -> Result<T, APIError> where T : Decodable {
+    func sendRequest<T>(_ request: URLRequest, for decodable: T.Type) async throws -> T where T : Decodable {
         guard let bundlePath = Bundle(for: type(of: self)).path(forResource: "StateData", ofType: "json")
         else {
-            return .failure(.noResult)
+            throw ServiceError.noResult
         }
         guard let json = try? String(contentsOfFile: bundlePath).data(using: .utf8)
         else {
-            return .failure(.dataDownloadFailed)
+            throw ServiceError.dataDownloadFailed
         }
         guard let stateData = try? JSONDecoder().decode(LocationData.self, from: json)
         else {
-            return .failure(.jsonDecodingFailed)
+            throw ServiceError.jsonDecodingFailed
         }
         
-        return .success(stateData as! T)
+        return stateData as! T
     }
 }

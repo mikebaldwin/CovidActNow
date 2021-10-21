@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum APIError: Error {
+enum ServiceError: Error {
     case noResult
     case jsonDecodingFailed
     case dataDownloadFailed

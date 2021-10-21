@@ -12,20 +12,10 @@ class CovidActNowServiceIntegrationTests: XCTestCase {
     func testGetStateDataForOregon() async throws {
         // Given
         let covidActNowService = CovidActNowService()
-        var expectedResult: LocationData?
-        
+                
         // When
-        let result = await covidActNowService.getDataFor(state: .oregon)
-        
-        switch result {
-        case let .success(resultData):
-            expectedResult = resultData
-        case let .failure(error):
-            XCTFail("Session failed with error: \(error)")
-        }
-        
-        let stateData = try XCTUnwrap(expectedResult)
-        
+        let stateData = try await covidActNowService.getDataFor(state: .oregon)
+                
         // Then
         XCTAssertEqual(stateData.fips, "41")
         XCTAssertEqual(stateData.country, "US")
@@ -39,20 +29,10 @@ class CovidActNowServiceIntegrationTests: XCTestCase {
     func testGetCountyDataForMultnomah() async throws {
         // Given
         let service = CovidActNowService()
-        var expectedResult: LocationData?
         
         // When
-        let result = await service.getDataFor(county: .multnomah)
-        
-        switch result {
-        case let .success(resultData):
-            expectedResult = resultData
-        case let .failure(error):
-            XCTFail("Session failed with error: \(error)")
-        }
-
-        let countyData = try XCTUnwrap(expectedResult)
-        
+        let countyData = try await service.getDataFor(county: .multnomah)
+                
         // Then
         XCTAssertEqual(countyData.fips, "41051")
         XCTAssertEqual(countyData.country, "US")
@@ -64,24 +44,24 @@ class CovidActNowServiceIntegrationTests: XCTestCase {
     }
     
     func testGetDataForInvalidFips() async throws {
-        // Given
         let service = CovidActNowService()
-        var expectedError: APIError?
-        
-        // When
-        let result = await service.getDataFor(county: .invalidCounty)
-        
-        switch result {
-        case .success:
-            XCTFail("Call resulted in a success, and should not have.")
-        case let .failure(error):
-            expectedError = error
-        }
-        
-        let invalidRequestError = try XCTUnwrap(expectedError)
-
-        // Then
-        XCTAssertEqual(invalidRequestError, APIError.accessDenied)
+        await XCTAssertThrowsError(try await service.getDataFor(county: .invalidCounty))
     }
 }
 
+extension XCTest {
+    func XCTAssertThrowsError<T: Sendable>(
+        _ expression: @autoclosure () async throws -> T,
+        _ message: @autoclosure () -> String = "",
+        file: StaticString = #filePath,
+        line: UInt = #line,
+        _ errorHandler: (_ error: Error) -> Void = { _ in }
+    ) async {
+        do {
+            _ = try await expression()
+            XCTFail(message(), file: file, line: line)
+        } catch {
+            errorHandler(error)
+        }
+    }
+}

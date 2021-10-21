@@ -12,19 +12,9 @@ class CovidActNowServiceTests: XCTestCase {
     func testGetDataForState() async throws {
         // Given
         let service = CovidActNowService(with: MockStateDataSessionProvider())
-        var expectedResult: LocationData?
-        
+                
         // When
-        let result = await service.getDataFor(state: .oregon)
-        
-        switch result {
-        case let .success(resultData):
-            expectedResult = resultData
-        case let .failure(error):
-            XCTFail("Mock session failed with error: \(error)")
-        }
-        
-        let stateData = try XCTUnwrap(expectedResult)
+        let stateData = try await service.getDataFor(state: .oregon)
         let metrics = stateData.metrics
 
         // Then
@@ -46,19 +36,8 @@ class CovidActNowServiceTests: XCTestCase {
     func testGetDataForCounty() async throws {
         // Given
         let service = CovidActNowService(with: MockCountyDataSessionProvider())
-        var expectedResult: LocationData?
-        
-        // When
-        let result = await service.getDataFor(county: .multnomah)
-        
-        switch result {
-        case let .success(resultData):
-            expectedResult = resultData
-        case let .failure(error):
-            XCTFail("Mock session failed with error: \(error)")
-        }
 
-        let countyData = try XCTUnwrap(expectedResult)
+        let countyData = try await service.getDataFor(county: .multnomah)
         let metrics = countyData.metrics
         
         // Then

@@ -14,15 +14,23 @@ struct CovidActNowService {
         self.sessionProvider = sessionProvider
     }
     
-    func getDataFor(state: State) async -> Result<LocationData, APIError> {
+    func getDataFor(state: State) async throws -> LocationData {
         let endpoint = StateEndpoint(for: state)
-        let result = await sessionProvider.sendRequest(endpoint.request, for: LocationData.self)
-        return result
+        do {
+            let result = try await sessionProvider.sendRequest(endpoint.request, for: LocationData.self)
+            return result
+        } catch {
+            throw error
+        }
     }
     
-    func getDataFor(county: County) async -> Result<LocationData, APIError> {
+    func getDataFor(county: County) async throws -> LocationData {
         let endpoint = CountyEndpoint(for: county)
-        let result = await sessionProvider.sendRequest(endpoint.request, for: LocationData.self)
-        return result
+        do {
+            let result = try await sessionProvider.sendRequest(endpoint.request, for: LocationData.self)
+            return result
+        } catch {
+            throw error
+        }
     }
 }
