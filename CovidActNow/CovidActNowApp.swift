@@ -11,7 +11,7 @@ import SwiftUI
 struct CovidActNowApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            DashboardView()
         }
     }
 }
