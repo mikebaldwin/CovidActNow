@@ -8,11 +8,18 @@
 import Foundation
 
 protocol SessionProviding {
-    func sendRequest<T>(_ request: URLRequest, for decodable: T.Type) async throws -> T where T: Decodable
+    func sendRequest<T>(
+        _ request: URLRequest,
+        for decodable: T.Type
+    ) async throws -> T where T: Decodable
 }
 
 struct SessionProvider: SessionProviding {
-    func sendRequest<T>(_ request: URLRequest, for decodable: T.Type) async throws -> T where T: Decodable {
+    
+    func sendRequest<T>(
+        _ request: URLRequest,
+        for decodable: T.Type
+    ) async throws -> T where T: Decodable {
         let session = URLSession(configuration: URLSessionConfiguration.default)
         var response: (data: Data, urlResponse: URLResponse)
         
@@ -22,10 +29,9 @@ struct SessionProvider: SessionProviding {
             throw ServiceError.dataDownloadFailed
         }
         
-        do {
-            try validate(response.urlResponse)
-        } catch {
-            throw error
+        guard validate(response.urlResponse)
+        else {
+            throw error(for: response.urlResponse)
         }
         
         do {
@@ -38,19 +44,28 @@ struct SessionProvider: SessionProviding {
 }
 
 private extension SessionProvider {
-    func validate(_ urlResponse: URLResponse) throws {
+    func validate(_ urlResponse: URLResponse) -> Bool {
         guard let httpResponse = urlResponse as? HTTPURLResponse
         else {
-            throw ServiceError.unknownError
+            return false
         }
         
+        let isOk = (200...299).contains(httpResponse.statusCode)
+        
+        return isOk
+    }
+    
+    func error(for urlResponse: URLResponse) -> ServiceError {
+        guard let httpResponse = urlResponse as? HTTPURLResponse
+        else {
+            return ServiceError.unknownError
+        }
+
         switch httpResponse.statusCode {
-        case 200:
-            return
         case 403:
-            throw ServiceError.accessDenied
+            return ServiceError.accessDenied
         default:
-            throw ServiceError.unknownError
+            return ServiceError.unknownError
         }
     }
 }
