@@ -15,6 +15,7 @@ struct LocationData: Decodable {
     let level: String
     let population: Int
     let metrics: CovidMetrics
+    let riskLevel: RiskLevel
     
     enum CodingKeys: String, CodingKey {
         case fips
@@ -24,5 +25,6 @@ struct LocationData: Decodable {
         case level
         case population
         case metrics
+        case riskLevel = "riskLevels"
     }    
 }
