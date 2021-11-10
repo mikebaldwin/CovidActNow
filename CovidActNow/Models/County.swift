@@ -11,5 +11,6 @@ typealias Fips = Int
 
 enum County: Fips {
     case multnomah = 41051
+    case albemarle = 51003
     case invalidCounty = 00000
 }

@@ -9,4 +9,5 @@ import Foundation
 
 enum State: String {
     case oregon = "OR"
+    case virginia = "VA"
 }
