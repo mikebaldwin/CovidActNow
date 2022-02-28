@@ -9,7 +9,7 @@ import XCTest
 @testable import CovidActNow
 
 class CovidActNowServiceCountyDataTests: XCTestCase {
-    private var service = CovidActNowService(with: MockCountyDataSessionProvider())
+    private var service = CovidActNowRepository(with: MockCountyDataSessionProvider())
     private var countyData: LocationData!
     
     override func setUp() async throws {

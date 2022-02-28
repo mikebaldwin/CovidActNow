@@ -11,7 +11,7 @@ import XCTest
 class CovidActNowServiceIntegrationTests: XCTestCase {
     func testGetStateDataForOregon() async throws {
         // Given
-        let covidActNowService = CovidActNowService()
+        let covidActNowService = CovidActNowRepository()
                 
         // When
         let stateData = try await covidActNowService.getDataFor(state: .oregon)
@@ -28,7 +28,7 @@ class CovidActNowServiceIntegrationTests: XCTestCase {
     
     func testGetCountyDataForMultnomah() async throws {
         // Given
-        let service = CovidActNowService()
+        let service = CovidActNowRepository()
         
         // When
         let countyData = try await service.getDataFor(county: .multnomah)
@@ -44,7 +44,7 @@ class CovidActNowServiceIntegrationTests: XCTestCase {
     }
     
     func testGetDataForInvalidFips() async throws {
-        let service = CovidActNowService()
+        let service = CovidActNowRepository()
         await XCTAssertThrowsError(try await service.getDataFor(county: .invalidCounty))
     }
 }

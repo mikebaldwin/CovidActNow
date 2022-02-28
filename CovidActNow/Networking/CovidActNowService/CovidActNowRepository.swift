@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct CovidActNowService {
+struct CovidActNowRepository {
     private let sessionProvider: SessionProviding
     
     init(with sessionProvider: SessionProviding = SessionProvider()) {
@@ -16,21 +16,19 @@ struct CovidActNowService {
     
     func getDataFor(state: State) async throws -> LocationData {
         let endpoint = StateEndpoint(for: state)
-        do {
-            let result = try await sessionProvider.sendRequest(endpoint.request, for: LocationData.self)
-            return result
-        } catch {
-            throw error
-        }
+        let result = try await sessionProvider.sendRequest(
+            endpoint.request,
+            for: LocationData.self
+        )
+        return result
     }
     
     func getDataFor(county: County) async throws -> LocationData {
         let endpoint = CountyEndpoint(for: county)
-        do {
-            let result = try await sessionProvider.sendRequest(endpoint.request, for: LocationData.self)
-            return result
-        } catch {
-            throw error
-        }
+        let result = try await sessionProvider.sendRequest(
+            endpoint.request,
+            for: LocationData.self
+        )
+        return result
     }
 }
