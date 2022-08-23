@@ -15,7 +15,6 @@ protocol SessionProviding {
 }
 
 struct SessionProvider: SessionProviding {
-    
     func sendRequest<T>(
         _ request: URLRequest,
         for decodable: T.Type
@@ -23,30 +22,21 @@ struct SessionProvider: SessionProviding {
         let session = URLSession(configuration: URLSessionConfiguration.default)
         var response: (data: Data, urlResponse: URLResponse)
         
-        do {
-            response = try await session.data(for: request)
-        } catch {
-            throw ServiceError.dataDownloadFailed
-        }
+        response = try await session.data(for: request)
         
-        guard validate(response.urlResponse)
-        else {
+        guard is200(response.urlResponse) else {
             throw error(for: response.urlResponse)
         }
         
-        do {
-            let decodedData = try JSONDecoder().decode(decodable, from: response.data)
-            return decodedData
-        } catch {
-            throw ServiceError.jsonDecodingFailed
-        }
+        let decodedData = try JSONDecoder().decode(decodable, from: response.data)
+        
+        return decodedData
     }
 }
 
 private extension SessionProvider {
-    func validate(_ urlResponse: URLResponse) -> Bool {
-        guard let httpResponse = urlResponse as? HTTPURLResponse
-        else {
+    func is200(_ urlResponse: URLResponse) -> Bool {
+        guard let httpResponse = urlResponse as? HTTPURLResponse else {
             return false
         }
         
